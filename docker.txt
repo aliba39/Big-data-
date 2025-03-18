@@ -1,0 +1,18 @@
+docker build -t tp03 .
+
+docker login
+docker tag tp03 aliba39/tp03:v1
+docker push aliba39/tp03:v1
+
+docker pull aliba39/tp03:v1
+
+
+docker run -d --name conteneur1 --network my_network -p 5001:5000 aliba39/tp03:v1
+docker run -d --name conteneur2 --network my_network -p 5002:5000 aliba39/tp03:v1
+docker run -d --name conteneur3 --network my_network -p 5003:5000 aliba39/tp03:v1
+docker network inspect my_network
+docker exec -u root -it conteneur1 /bin/bash
+apt-get update && apt-get install -y iputils-ping
+docker exec conteneur1 ping conteneur2
+
+docker ps
