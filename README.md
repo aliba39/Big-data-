@@ -15,11 +15,13 @@ This project demonstrates how to create a Docker image, push it to Docker Hub, a
 ### 1️⃣ Build the Docker Image
 Run the following command in the project directory:
 
-```bash
-docker build -t my_tp3_image .
+ ```bash
+ docker build -t my_tp3_image .
+ ```
 
 ### 2️⃣ Tag and Push the Image to Docker Hub
 -Log in to Docker Hub:
+
  ```js
  docker login
  ```
