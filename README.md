@@ -1,4 +1,4 @@
-# TP3 - Dockerized Application
+# TP4 - Dockerized Application
 
 This project demonstrates how to create a Docker image, push it to Docker Hub, and deploy multiple containers connected via a network.
 
