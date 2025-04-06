@@ -8,6 +8,15 @@ Create a NoSQL database using Cassandra to store and query information about res
 ## 🛠️ Installation & Execution
 
 ### Via Docker:
+  1. Open PowerShell or CMD and pull Cassandra image:
+```bash
+docker pull cassandra
+```
+  2. Start a Cassandra container:
+```bash
+docker run --name cassandra-container -p 9042:9042 -d cassandra
+```
+  3. Access the CQL shell (cqlsh):
 ```bash
 docker exec -it cassandra-container cqlsh
 ```
