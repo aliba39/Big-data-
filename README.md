@@ -92,28 +92,38 @@ SELECT count(*) FROM Inspection;
 ## 🔍 Useful CQL Queries
 
 -- 1. List all restaurants
+```bash
 SELECT * FROM Restaurant;
-
+```
 -- 2. List restaurant names only
+```bash
 SELECT name FROM Restaurant;
-
+```
 -- 3. Get name and borough of a specific restaurant
+```bash
 SELECT name, borough FROM Restaurant WHERE id = 41569764;
-
+```
 -- 4. Get inspection dates and grades for a restaurant
+```bash
 SELECT inspectiondate, grade FROM Inspection WHERE idrestaurant = 41569764;
-
+```
 -- 5. Get names of restaurants serving French cuisine
+```bash
 SELECT name FROM Restaurant WHERE cuisinetype = 'French';
-
+```
 -- 6. Get names of restaurants in Brooklyn
+```bash
 SELECT name FROM Restaurant WHERE borough = 'BROOKLYN' ALLOW FILTERING;
-
+```
 -- 7. Grades and scores of a restaurant with score ≥ 10
+```bash
 SELECT grade, score FROM Inspection WHERE idrestaurant = 41569764 AND score >= 10 ALLOW FILTERING;
-
+```
 -- 8. Grades for inspections with score > 30
+```bash
 SELECT grade FROM Inspection WHERE score > 30 ALLOW FILTERING;
-
+```
 -- 9. Count of the previous query
+```bash
 SELECT count(*) FROM Inspection WHERE score > 30 ALLOW FILTERING;
+```
