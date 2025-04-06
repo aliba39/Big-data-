@@ -28,7 +28,8 @@ docker exec -it cassandra-container cqlsh
 ```bash
 CREATE KEYSPACE IF NOT EXISTS resto_NY
 WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
-
+```
+```bash
 USE resto_NY;
 ```
 
@@ -86,7 +87,9 @@ docker cp path-to-file/restaurants_inspections.csv container-ID:/
   3. Use COPY command inside cqlsh:
 ```bash	
 USE resto_NY;
+```
 
+```bash
 COPY Restaurant (id, name, borough, buildingnum, street, zipcode, phone, cuisinetype)
 FROM '/restaurants.csv' WITH DELIMITER=',';
 
