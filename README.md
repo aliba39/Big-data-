@@ -68,8 +68,8 @@ CREATE INDEX fk_Inspection_Restaurant ON Inspection (Grade);
 ## 📥 Importing the Data
 - Steps:
   1. Extract the restaurants.zip file
+  2. Copy the .csv files into the Docker container:
 
-  2.Copy the .csv files into the Docker container:
 ```bash
 docker cp path-to-file/restaurants.csv container-ID:/
 docker cp path-to-file/restaurants_inspections.csv container-ID:/
