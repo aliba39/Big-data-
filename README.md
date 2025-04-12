@@ -114,31 +114,47 @@ SELECT * FROM Restaurant;
 ```bash
 SELECT name FROM Restaurant;
 ```
+![image](https://github.com/user-attachments/assets/82ca7c97-63ad-4e4a-9d71-0e9b0f7fc227)
+
 -- 3. Get name and borough of a specific restaurant
 ```bash
 SELECT name, borough FROM Restaurant WHERE id = 41569764;
 ```
+![image](https://github.com/user-attachments/assets/f058f3d8-4873-4691-97fd-4b8fd78be41f)
+
 -- 4. Get inspection dates and grades for a restaurant
 ```bash
 SELECT inspectiondate, grade FROM Inspection WHERE idrestaurant = 41569764;
 ```
+![image](https://github.com/user-attachments/assets/2369896b-cf76-4d84-9df9-ef1c4eeb90aa)
+
 -- 5. Get names of restaurants serving French cuisine
 ```bash
 SELECT name FROM Restaurant WHERE cuisinetype = 'French';
 ```
+![image](https://github.com/user-attachments/assets/c13274c6-61ec-4f86-9c10-c5427cff592e)
+
 -- 6. Get names of restaurants in Brooklyn
 ```bash
 SELECT name FROM Restaurant WHERE borough = 'BROOKLYN' ALLOW FILTERING;
 ```
+![image](https://github.com/user-attachments/assets/e666ce6e-9c32-4027-a14b-7289179a8dd3)
+
 -- 7. Grades and scores of a restaurant with score ≥ 10
 ```bash
 SELECT grade, score FROM Inspection WHERE idrestaurant = 41569764 AND score >= 10 ALLOW FILTERING;
 ```
+![image](https://github.com/user-attachments/assets/e4281f9b-8823-463f-8cf9-0611b6ae2c2c)
+
 -- 8. Grades for inspections with score > 30
 ```bash
 SELECT grade FROM Inspection WHERE score > 30 ALLOW FILTERING;
 ```
+![image](https://github.com/user-attachments/assets/cd00ade3-b484-4da6-8de8-5a9c7846ad52)
+
 -- 9. Count of the previous query
 ```bash
 SELECT count(*) FROM Inspection WHERE score > 30 ALLOW FILTERING;
 ```
+![image](https://github.com/user-attachments/assets/41a75e0d-3020-49dd-ac41-d721922b6b55)
+
