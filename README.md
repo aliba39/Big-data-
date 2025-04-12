@@ -108,6 +108,8 @@ SELECT count(*) FROM Inspection;
 ```bash
 SELECT * FROM Restaurant;
 ```
+![image](https://github.com/user-attachments/assets/18218934-5cd0-46dc-b031-28e3114c4fa3)
+
 -- 2. List restaurant names only
 ```bash
 SELECT name FROM Restaurant;
