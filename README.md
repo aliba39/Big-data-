@@ -50,32 +50,44 @@ This project demonstrates practical exercises using **MongoDB** to perform CRUD 
   ```js
   db.produits.find().pretty()
   ```
+  ![image](https://github.com/user-attachments/assets/5ea34b3f-23f6-4e78-a234-54d305059a7c)
+
 - Recover the first product in the group:
   ```js
   db.produits.findOne()
   ```
+  ![image](https://github.com/user-attachments/assets/04102e07-f271-470d-b260-b19ca9fd87ec)
+
 - Find a specific product:
   ```js
   db.produits.findOne({nom: "Thinkpad X230"})
   db.produits.findOne({_id: ObjectId("PRODUCT_ID")})
-
   ```
+  ![image](https://github.com/user-attachments/assets/de53c7ab-46e6-4d66-8f79-236fa0b477d1)
+
 - Find products with a price greater than 13723 DA:
   ```js
   db.produits.find({prix: {$gt: 13723}}).pretty()
   ```
+  ![image](https://github.com/user-attachments/assets/53d17270-5c9c-4ffb-89b9-978aeaaa0c97)
+
 - Recover the first product with the ultrabook field in True:
   ```js
   db.produits.findOne({ultrabook: true})
   ```
+  ![image](https://github.com/user-attachments/assets/2a9cf0c0-a191-4bff-9b15-4d2dcd4d4df9)
+
 - Recover the first product whose name contains MacBook":
   ```js
   db.produits.findOne({nom: /Macbook/})
   ```
+  ![image](https://github.com/user-attachments/assets/b433c5c6-b52a-40b9-a63b-dd7a727d9971)
+
 - Find products whose name starts with "Macbook":
   ```js
   db.produits.find({nom: /^Macbook/}).pretty()
   ```
+  ![image](https://github.com/user-attachments/assets/50929694-c4c0-4892-b50b-b1fadd36378c)
 
 ## 4. Delete Operations
 - Delete all products from **Apple**:
