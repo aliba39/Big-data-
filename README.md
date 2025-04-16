@@ -89,8 +89,13 @@ Write a message and press Entrance.
 
 ```bash
 .\bin\windows\kafka-server-start.bat .\config\server-1.properties
+```
+![image](https://github.com/user-attachments/assets/d4d46d87-e94e-4789-bcc9-af0ac3f20984)
+
+```bash
 .\bin\windows\kafka-server-start.bat .\config\server-2.properties
 ```
+![image](https://github.com/user-attachments/assets/bb5908a8-e43f-42be-8411-30cae4c83978)
 
 4. Create a replicated topic :
 ```bash
