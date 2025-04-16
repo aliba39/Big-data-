@@ -111,14 +111,12 @@ python iot_producer.py
 You should see messages being sent and received, like:
 
 **Producer Output:**
-```
-Sending data: {'temperature': 28.73, 'humidity': 53.21}
-```
+![image](https://github.com/user-attachments/assets/0ea2c47c-2a9c-4ab8-bdfe-4aa619b43ff3)
+
 
 **Consumer Output:**
-```
-Received: {'temperature': 28.73, 'humidity': 53.21}
-```
+![image](https://github.com/user-attachments/assets/605ad053-d6c0-4e5f-b82a-8afd43fc1033)
+
 
 ---
 
