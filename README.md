@@ -1,6 +1,3 @@
-# Create the full TP README that includes all 5 steps in a single document
-
-full_tp_readme = """
 # 🧪 TP Apache Kafka – Windows + IoT Simulation
 
 This repository contains a complete practical lab (TP) on **Apache Kafka**, including installation, topic creation, producer-consumer demo, multiple broker configuration, and an IoT simulation project using Python.
