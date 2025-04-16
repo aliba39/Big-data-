@@ -79,13 +79,14 @@ Write a message and press Entrance.
 
 2. Modify each file:
 
-  -`Broker.id = 1/2`
+  - `Broker.id = 1/2`
 
-  -`List = complaint: //: 9093/9094`
+  - `List = complaint: //: 9093/9094`
 
-  -`log.DIRS = C:/KAFKA/KAFKA-LOGS-1 and KAFKA-LOGS-2`
+  - `log.DIRS = C:/KAFKA/KAFKA-LOGS-1 and KAFKA-LOGS-2`
 
 3. Start Each Broker in a terminal:
+
 ```bash
 .\bin\windows\kafka-server-start.bat .\config\server-1.properties
 .\bin\windows\kafka-server-start.bat .\config\server-2.properties
