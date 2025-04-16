@@ -28,12 +28,14 @@ pip install kafka-python
 cd C:\kafka
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 ```
+![image](https://github.com/user-attachments/assets/bf37e1b3-3565-4c8a-a697-8a0dad68fb63)
 
 4. Start Kafka server (in a new terminal):
 
 ```bash
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 ```
+![image](https://github.com/user-attachments/assets/f3a4bdc9-20d1-44d2-b37c-ef2fedf3916c)
 
 5. Create Kafka topic:
 
