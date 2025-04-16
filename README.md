@@ -46,11 +46,13 @@ Create a kafka topic called IoT-Topic :
 ```bash
 .\bin\windows\kafka-topics.bat --create --topic iot-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
+![image](https://github.com/user-attachments/assets/a29948e0-af7a-47cd-a68f-2b989a102f37)
 
 List the topics :
 ```bash
 .\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
 ```
+![image](https://github.com/user-attachments/assets/bccba3a3-b6da-4ecf-a775-6a3ed09a86b9)
 
 ---
 ## 3️⃣ Exemple Producteur Consommateur
@@ -62,11 +64,14 @@ List the topics :
 ```
 Write a message and press Entrance.
 
+![image](https://github.com/user-attachments/assets/f9ebdc59-1225-4652-ac93-156d48193004)
+
 ### 🔵 Consumer :
 
 ```bash
 .\bin\\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic iot-topic --from-beginning
 ```
+![image](https://github.com/user-attachments/assets/18f6b7f2-62f3-4e75-9dc3-48e6730c1635)
 
 ---
 ## 4️⃣ Configuration of several brokers
@@ -101,6 +106,7 @@ Write a message and press Entrance.
 ```bash
 .\bin\windows\kafka-topics.bat --create --topic replicated-topic --bootstrap-server localhost:9093 --partitions 1 --replication-factor 2
 ```
+![image](https://github.com/user-attachments/assets/760f15f3-45cd-4c56-9692-b5af7eac22db)
 
 ---
 ## 5️⃣ Projet IoT + Kafka
