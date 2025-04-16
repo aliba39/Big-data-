@@ -6,11 +6,11 @@ This repository contains a complete practical lab (TP) on **Apache Kafka**, incl
 
 ## 📋 Table of Contents
 
-1. [Apache Kafka Installation under Windows] (#Apache-Kafka-Installation-under-Windows)
-2. [Creation of a topic] (#creation-of-a-topic)
-3. [Example consumer producer] (#Example-producer-Consumer)
-4. [Configuration of several brokers] (#Configuration-of-several-brokers)
-5. [IoT + Kafka project] (#IoT-Kafka-project)
+1. [Apache Kafka Installation under Windows](#Apache-Kafka-Installation-under-Windows)
+2. [Creation of a topic](#creation-of-a-topic)
+3. [Example consumer producer](#Example-producer-Consumer)
+4. [Configuration of several brokers](#Configuration-of-several-brokers)
+5. [IoT + Kafka project](#IoT-Kafka-project)
 
 ---
 
