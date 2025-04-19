@@ -158,7 +158,16 @@ for message in consumer:
 ```
 
 ---
+## 📁 File Structure
 
+```
+project/
+│
+├── iot_producer.py
+├── iot_consumer.py
+└── README.md
+```
+---
 ## ▶️ How to Run
 
 1. Start Kafka and Zookeeper (see setup above).
@@ -185,10 +194,45 @@ You should see messages being sent and received, like:
 
 ![image](https://github.com/user-attachments/assets/605ad053-d6c0-4e5f-b82a-8afd43fc1033)
 
+---
+
+### II. Start Zookeeper and Kafka in Background (Windows)
+
+#### 📁 Using `nssm`
+1. Extract `nssm`
+2. Open a terminal in `nssm\win64` and run:
+   ```bash
+   nssm install Zookeeper
+   ```
+   - Path: `C:\kafka\bin\windows\zookeeper-server-start.bat`
+   - Arguments: `C:\kafka\config\zookeeper.properties`
+   - Startup Dir: `C:\kafka`
+
+3. Repeat for Kafka:
+   ```bash
+   nssm install Kafka
+   ```
+   - Path: `kafka-server-start.bat`
+   - Arguments: `config\server.properties`
+
+4. Start services (run **as Administrator**):
+   ```bash
+   net start Zookeeper
+   net start Kafka
+   ```
 
 ---
 
+## 🧹 Stop Kafka & Zookeeper
 
+```bash
+net stop Kafka
+net stop Zookeeper
+```
+---
+
+## ✅ Done!
+Now you've got a full Kafka IoT simulation running on Windows, including background services and fault detection.
 
 
 
