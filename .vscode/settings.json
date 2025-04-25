@@ -1,0 +1,17 @@
+{
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-1.8",
+        "path": "C:/Program Files/Java/openlogic-openjdk-8u452-b09-windows-x64",
+        "default": true
+      }
+    ],
+    "java.home": "C:/Program Files/Java/openlogic-openjdk-8u452-b09-windows-x64",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.project.referencedLibraries": [
+      "lib/**/*.jar"
+    ]
+  }
+  
