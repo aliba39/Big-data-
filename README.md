@@ -112,6 +112,7 @@ HDFS Permissions: Always create `/user/root` before working with HDFS.
 └── .vscode
     └── launch.json
 ```
+![image](https://github.com/user-attachments/assets/e72b1e91-9cf2-4cac-bd3f-1cbf27254285)
 
 
 
