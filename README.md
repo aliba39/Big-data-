@@ -49,12 +49,68 @@ docker exec -it hadoop-master bash
 ```
 ![لقطة شاشة 2025-04-26 090328](https://github.com/user-attachments/assets/ddd1b1dd-cb29-4c83-b091-e9568f8b73e3)
 
+## 3. HDFS Operations
+```bash
+# Create HDFS directory and upload data
+hdfs dfs -mkdir -p /user/root/input
+hdfs dfs -put purchases.txt input
+hdfs dfs -ls input  # Verify upload
+```
+![لقطة شاشة 2025-04-26 090350](https://github.com/user-attachments/assets/0551a1db-2cc2-458b-98e4-6f6519284368)
+# 🖥️ Run WordCount MapReduce Job
+## 1. Build the Project
+```bash
+mvn clean package  # Generates JAR in target/
+```
+## 2. Copy JAR to Hadoop Master
+```bash
+docker cp target/wordcount-1.0-SNAPSHOT-jar-with-dependencies.jar hadoop-master:/root/wordcount.jar
+```
+![لقطة شاشة 2025-04-26 090359](https://github.com/user-attachments/assets/f7ed7045-b056-4302-ab7e-fe3b5b6e7eef)
 
+## 3. Execute the Job
+```bash
+# Inside the Hadoop master container
+hadoop jar wordcount.jar input output
 
+# View results
+hdfs dfs -cat output/part-r-00000
+```
 
+# 📊 Monitoring
+HDFS UI: http://localhost:9870
 
+YARN ResourceManager: http://localhost:8088
 
+Worker Nodes:
 
+Worker 1: `http://localhost:8041`
+
+Worker 2: `http://localhost:8042`
+
+# 🚨 Troubleshooting
+Windows Users: Set `HADOOP_HOME` environment variable and add `%HADOOP_HOME%\bin` to `PATH`.
+
+Port Conflicts: Ensure ports `9870`, `8088`, `8040-8042` are free.
+
+HDFS Permissions: Always create `/user/root` before working with HDFS.
+
+# 📂 Project Structure
+```bash
+.
+├── src/
+│   └── main/java/hadoop/mapreduce/
+│       ├── tp1/
+│       │   ├── TokenizerMapper.java    # Mapper class
+│       │   ├── IntSumReducer.java      # Reducer class
+│       │   └── WordCount.java          # Driver class
+├── target/                             # Compiled JAR
+├── pom.xml                            # Maven dependencies
+├── resources/
+│   └── input/                         # Sample input files
+└── .vscode
+    └── launch.json
+```
 
 
 
