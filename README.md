@@ -56,12 +56,13 @@ hdfs dfs -mkdir -p /user/root/input
 hdfs dfs -put purchases.txt input
 hdfs dfs -ls input  # Verify upload
 ```
-![لقطة شاشة 2025-04-26 090350](https://github.com/user-attachments/assets/0551a1db-2cc2-458b-98e4-6f6519284368)
+![image](https://github.com/user-attachments/assets/e1a36270-ff00-4654-a51a-5c69bd74d9ab)
 # 🖥️ Run WordCount MapReduce Job
 ## 1. Build the Project
 ```bash
 mvn clean package  # Generates JAR in target/
 ```
+![image](https://github.com/user-attachments/assets/517406b7-ee95-4647-95f2-d4497dd11208)
 ## 2. Copy JAR to Hadoop Master
 ```bash
 docker cp target/wordcount-1.0-SNAPSHOT-jar-with-dependencies.jar hadoop-master:/root/wordcount.jar
