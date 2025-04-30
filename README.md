@@ -171,7 +171,7 @@ apt install netcat
 ### Create a local stream
 
 ```bash
-nc -lk 9999
+nc -l -p 9999
 ```
 ![image](https://github.com/user-attachments/assets/1350e9ec-52b1-438a-8fcd-35128e18d753)
 
