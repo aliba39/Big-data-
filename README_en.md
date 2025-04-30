@@ -1,27 +1,27 @@
-# TP N°9 : Traitement par Lot et Streaming avec Spark
+# TP No. 9: Batch and Streaming Processing with Spark
 
-## 🎯 Objectifs
+## 🎯 Objectives
 
-Ce projet a pour objectif de :
-- Apprendre à utiliser **Apache Spark** pour le traitement **Batch** et **Streaming**
-- Mettre en œuvre des traitements parallèles sur un cluster Hadoop
-- Concevoir un mini-projet Big Data intégrant Spark, Java et Docker
+This project aims to:
+- Learn to use **Apache Spark** for **Batch** and **Streaming** processing
+- Implement parallel processing on a Hadoop cluster
+- Build a mini Big Data project integrating Spark, Java, and Docker
 
 ---
 
-## 🛠️ Environnement et Technologies
+## 🛠️ Environment and Technologies
 
 - **Apache Spark** 3.5.0  
 - **Apache Hadoop** 3.3.6  
-- **Docker** (3 conteneurs : master + 2 workers)  
+- **Docker** (3 containers: master + 2 workers)  
 - **Java** 1.8  
 - **Maven**  
-- **VSCode** ou tout autre IDE  
+- **VSCode** or any other IDE  
 - **Linux / Unix-based OS**
 
 ---
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 TP-Spark/
@@ -45,7 +45,7 @@ TP-Spark/
 
 ---
 
-## ⚙️ Lancement des conteneurs Docker
+## ⚙️ Starting Docker Containers
 
 ```bash
 docker start hadoop-master hadoop-worker1 hadoop-worker2
@@ -55,22 +55,22 @@ docker exec -it hadoop-master bash
 
 ---
 
-## 📦 Partie 1 : Traitement Batch avec Spark
+## 📦 Part 1: Batch Processing with Spark
 
-### Compilation du projet Java
+### Compile the Java Project
 
 ```bash
 cd batch/
 mvn package
 ```
 
-### Copier le .jar dans le conteneur master
+### Copy the .jar to the master container
 
 ```bash
 docker cp target/wordcount-spark.jar hadoop-master:/root/
 ```
 
-### Lancer le job en local
+### Run the job in local mode
 
 ```bash
 spark-submit --class spark.batch.tp21.WordCountTask \
@@ -78,7 +78,7 @@ spark-submit --class spark.batch.tp21.WordCountTask \
              wordcount-spark.jar input/purchases.txt out-spark
 ```
 
-### Lancer le job sur YARN
+### Run the job on YARN
 
 ```bash
 spark-submit --class spark.batch.tp21.WordCountTask \
@@ -88,35 +88,35 @@ spark-submit --class spark.batch.tp21.WordCountTask \
 
 ---
 
-## 🔁 Partie 2 : Traitement Streaming avec Spark
+## 🔁 Part 2: Streaming Processing with Spark
 
-### Compilation du projet Java
+### Compile the Java Project
 
 ```bash
 cd streaming/
 mvn package
 ```
 
-### Copier le .jar dans le conteneur master
+### Copy the .jar to the master container
 
 ```bash
 docker cp target/stream-1.jar hadoop-master:/root/
 ```
 
-### Installer netcat (nc) sur le conteneur
+### Install netcat (nc) on the container
 
 ```bash
 apt update
 apt install netcat
 ```
 
-### Créer un flux en local
+### Create a local stream
 
 ```bash
 nc -lk 9999
 ```
 
-### Lancer le traitement streaming
+### Run the streaming process
 
 ```bash
 spark-submit --class spark.streaming.tp22.Stream \
@@ -124,28 +124,28 @@ spark-submit --class spark.streaming.tp22.Stream \
              stream-1.jar > out
 ```
 
-Tapez des mots dans la console du terminal `nc`, et les résultats seront affichés en streaming.
+Type words into the `nc` terminal console, and results will be streamed to the console.
 
 ---
 
-## 📚 Fonctionnalités Clés
+## 📚 Key Features
 
-- Traitement de fichiers texte en mode batch
-- WordCount distribué avec Spark (Scala et Java)
-- Streaming en temps réel via socket TCP
-- Intégration avec Docker et HDFS
+- Batch text file processing
+- Distributed WordCount with Spark (Scala and Java)
+- Real-time streaming via TCP socket
+- Integration with Docker and HDFS
 
 ---
 
-## 🧪 Exemple de Données
+## 🧪 Sample Data
 
-Fichier `purchases.txt` contenant :
+File `purchases.txt` containing:
 
 ```
 apple banana apple orange banana banana
 ```
 
-Résultat attendu (Batch ou Streaming) :
+Expected result (Batch or Streaming):
 
 ```
 apple: 2
@@ -155,13 +155,13 @@ orange: 1
 
 ---
 
-## ✅ Auteurs
+## ✅ Author
 
 - **Ahmad Ayoub**  
-- TP encadré par votre enseignant Big Data
+- Academic project supervised by Big Data course instructor
 
 ---
 
-## 📄 Licence
+## 📄 License
 
-Projet académique – Licence libre à usage pédagogique
+Academic project – Free for educational use
