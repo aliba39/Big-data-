@@ -139,7 +139,7 @@ spark-submit --class spark.batch.tp21.WordCountTask \
              --master yarn --deploy-mode cluster \
              wordcount-spark.jar input/purchases.txt out-spark2
 ```
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/935f0c4f-9db7-4bf7-956f-d0cc149b3dcc)
 
 ---
 
@@ -173,6 +173,7 @@ apt install netcat
 ```bash
 nc -lk 9999
 ```
+![image](https://github.com/user-attachments/assets/1350e9ec-52b1-438a-8fcd-35128e18d753)
 
 ### Run the streaming process
 
@@ -181,6 +182,7 @@ spark-submit --class spark.streaming.tp22.Stream \
              --master local \
              stream-1.jar > out
 ```
+![لقطة شاشة 2025-04-30 194847](https://github.com/user-attachments/assets/96d90f43-f4e3-4ba8-a3f5-58469eb30b61)
 
 Type words into the `nc` terminal console, and results will be streamed to the console.
 
