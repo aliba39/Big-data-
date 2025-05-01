@@ -147,7 +147,7 @@ spark-submit --class spark.batch.tp21.WordCountTask \
              --master yarn --deploy-mode cluster \
              wordcount-spark.jar input/purchases.txt out-spark2
 ```
-![image](https://github.com/user-attachments/assets/935f0c4f-9db7-4bf7-956f-d0cc149b3dcc)
+![لقطة شاشة 2025-04-30 175144](https://github.com/user-attachments/assets/086495b4-f31c-47f3-ab11-72059c371cde)
 
 ---
 
