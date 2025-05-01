@@ -139,6 +139,10 @@ spark-submit --class spark.batch.tp21.WordCountTask \
              wordcount-spark.jar input/purchases.txt out-spark
 ```
 ![لقطة شاشة 2025-04-30 161758](https://github.com/user-attachments/assets/48c662e1-0df9-4e7b-a0d3-db7a550346cc)
+```bash
+hdfs dfs -tail out-spark/part-00000
+```
+![image](https://github.com/user-attachments/assets/0b933819-e8ae-4c9e-bf76-cbbe32811281)
 
 ### Run the job on YARN
 
