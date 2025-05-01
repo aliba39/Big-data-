@@ -181,7 +181,7 @@ apt install netcat
 ```bash
 nc -l -p 9999
 ```
-![image](https://github.com/user-attachments/assets/1350e9ec-52b1-438a-8fcd-35128e18d753)
+![image](https://github.com/user-attachments/assets/325befb3-b3fc-4af4-9dfe-8434b60894ce)
 
 ### Run the streaming process
 
@@ -190,7 +190,7 @@ spark-submit --class spark.streaming.tp22.Stream \
              --master local \
              stream-1.jar > out
 ```
-![لقطة شاشة 2025-04-30 194847](https://github.com/user-attachments/assets/96d90f43-f4e3-4ba8-a3f5-58469eb30b61)
+![image](https://github.com/user-attachments/assets/3ce64cbc-79b5-465e-8bdc-b797e3c55e01)
 
 Type words into the `nc` terminal console, and results will be streamed to the console.
 
